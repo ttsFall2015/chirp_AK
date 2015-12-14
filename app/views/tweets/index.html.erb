@@ -15,13 +15,16 @@
       <tr>
         <td><%= x.message %></td>
         <td><%= x.user.username %></td>
-        <td><%= link_to 'Show', x %></td>
+        <td><%= link_to 'Show', x %></td><nav>
+        </nav>
         <td><%= link_to 'Edit', edit_tweet_path(x) %></td>
+        <!-- proves a "edit" link to the edit.html.erb view which allows them to edit their submission -->
         <td><%= link_to 'Destroy', x, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!-- provides a "delete" link to users which deletes their submission -->
       </tr>
     <% end %>
   </tbody>
 </table>
 <br>
-<%= link_to 'New Tweet', new_tweet_path, class: "btn btn-primary btn-lg" %>
+<%= link_to 'New Tweet', new_tweet_path, class: "btn btn-primary" %>
 <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "btn btn-danger btn-lg" %>
