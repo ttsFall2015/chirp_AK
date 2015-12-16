@@ -19,3 +19,5 @@ class User < ActiveRecord::Base
   def likes?(tweet)
     tweet.likes.where(user_id: id).any?
   end
+
+end
