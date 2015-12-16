@@ -2,8 +2,14 @@ Rails.application.routes.draw do
 
   get 'profiles/:id' => "profiles#show", as: :profile
   get "profiles" => "profiles#index"
-  
-  resources :tweets
+
+      resources :tweets do
+        resource :like
+      end
+
+  resources :relationships
+  #Rails is built to be RESTful > Representational State Transfer
+  #SOAP > Standard Object Access Protocol
 
   root "tweets#index"
 
