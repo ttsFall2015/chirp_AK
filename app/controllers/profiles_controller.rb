@@ -9,3 +9,5 @@ class ProfilesController < ApplicationController
     @users = User.all
     # Creates an index method called users which applies to all users
 end
+
+end
